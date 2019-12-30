@@ -25,7 +25,7 @@
       let start = false;
       const canvas = document.getElementById("canvas");
       const context = canvas.getContext("2d");
-      context.font = "48px serif";
+      context.font = "32px serif";
       const pickN = (min, max, n) => {
         const list = new Array(max - min + 1).fill().map((_, i) => i + min);
         const ret = [];
@@ -47,7 +47,7 @@
               rand.forEach(index => {
                 if (path[index]) {
                   map.push({
-                    x: Math.random() * (280 - 40) + 40,
+                    x: Math.random() * (240 - 0) + 0,
                     w: path[index].surface_form
                   });
                 }
@@ -60,10 +60,10 @@
         if (!start) return;
         context.clearRect(0, 0, canvas.width, canvas.height);
         map.forEach((word, i) => {
-          context.fillText(word.w, word.x, y + i * 32 * -1);
+          context.fillText(word.w, word.x, y + i * 52 * -1);
         });
-        y += 50;
-      }, 250);
+        y += 25;
+      }, 50);
     </script>
   </body>
 </html>
