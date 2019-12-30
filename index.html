@@ -60,9 +60,9 @@
         if (!start) return;
         context.clearRect(0, 0, canvas.width, canvas.height);
         map.forEach((word, i) => {
-          context.fillText(word.w, word.x, y + i * 52 * -1);
+          context.fillText(word.w, word.x, y + i * 48 * -1);
         });
-        y += 25;
+        y += 10;
       }, 50);
     </script>
   </body>
